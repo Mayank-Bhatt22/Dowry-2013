@@ -1,0 +1,41 @@
+create database Dowry;
+
+use Dowry;
+
+create table Dowry (
+	State_and_UTs varchar(50),
+	Crime_Head varchar(50),
+	Year int,
+	Cases_Pending_Investigation_from_Previous_Year int,
+	Cases_reported_during_the_year int,
+	No_of_cases_withdrawn_by_the_Govt_during_investigation int,
+	Cases_not_investigated_or_in_which_investigation_was_refused int,
+	Cases_declared_false_on_account_of_mistake_of_fact_or_of_law int,
+	Cases_in_which_chargesheets_were_laid int,
+	sheets_were_not_laid_but_final_report_submitted_during_the_year int,
+	Total_cases_Chargesheeted_and_Final_Report_submitted int,
+	Cases_pending_investigation_at_the_end_of_the_year int,
+	Cases_pending_trial_from_the_previous_year int,
+	Cases_sent_for_trial_during_the_year int,
+	No_of_cases_withdrawn_by_the_Govt int,
+	Total_cases_for_trial_during_the_year int,
+	Cases_compounded_or_withdrawn int,
+	Cases_in_which_trials_were_completed int,
+	Cases_convicted int,
+	Cases_acquitted_or_discharged int,
+	Cases_pending_trial_at_the_end_of_the_year int
+);
+
+select * from Dowry;
+
+select @@secure_file_priv;
+
+SHOW VARIABLES LIKE 'secure_file_priv';
+
+LOAD DATA INFILE 'file path'
+INTO TABLE Dowry
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+select * from Dowry;
